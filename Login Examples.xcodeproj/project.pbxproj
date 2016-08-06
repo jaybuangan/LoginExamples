@@ -14,6 +14,9 @@
 		693005761D554A8C00EC116F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693005741D554A8C00EC116F /* LaunchScreen.storyboard */; };
 		693005811D554A8C00EC116F /* Login_ExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693005801D554A8C00EC116F /* Login_ExamplesTests.swift */; };
 		6930058C1D554A8C00EC116F /* Login_ExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6930058B1D554A8C00EC116F /* Login_ExamplesUITests.swift */; };
+		6930059B1D555F1B00EC116F /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6930059A1D555F1B00EC116F /* LoginButton.swift */; };
+		6930059D1D55608500EC116F /* BlurredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6930059C1D55608500EC116F /* BlurredViewController.swift */; };
+		6930059F1D55631400EC116F /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6930059E1D55631400EC116F /* dog.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		693005871D554A8C00EC116F /* Login ExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login ExamplesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6930058B1D554A8C00EC116F /* Login_ExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ExamplesUITests.swift; sourceTree = "<group>"; };
 		6930058D1D554A8C00EC116F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6930059A1D555F1B00EC116F /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		6930059C1D55608500EC116F /* BlurredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurredViewController.swift; sourceTree = "<group>"; };
+		6930059E1D55631400EC116F /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		6930056A1D554A8C00EC116F /* Login Examples */ = {
 			isa = PBXGroup;
 			children = (
+				693005991D555BDB00EC116F /* Blurred */,
 				6930056B1D554A8C00EC116F /* AppDelegate.swift */,
 				6930056D1D554A8C00EC116F /* ViewController.swift */,
 				6930056F1D554A8C00EC116F /* Main.storyboard */,
@@ -125,6 +132,16 @@
 			path = "Login ExamplesUITests";
 			sourceTree = "<group>";
 		};
+		693005991D555BDB00EC116F /* Blurred */ = {
+			isa = PBXGroup;
+			children = (
+				6930059E1D55631400EC116F /* dog.jpg */,
+				6930059A1D555F1B00EC116F /* LoginButton.swift */,
+				6930059C1D55608500EC116F /* BlurredViewController.swift */,
+			);
+			name = Blurred;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +151,7 @@
 			buildPhases = (
 				693005641D554A8C00EC116F /* Sources */,
 				693005651D554A8C00EC116F /* Frameworks */,
+				693005A01D556BCD00EC116F /* Export Sketch Assets */,
 				693005661D554A8C00EC116F /* Resources */,
 			);
 			buildRules = (
@@ -230,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				693005761D554A8C00EC116F /* LaunchScreen.storyboard in Resources */,
+				6930059F1D55631400EC116F /* dog.jpg in Resources */,
 				693005731D554A8C00EC116F /* Assets.xcassets in Resources */,
 				693005711D554A8C00EC116F /* Main.storyboard in Resources */,
 			);
@@ -251,12 +270,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		693005A01D556BCD00EC116F /* Export Sketch Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Export Sketch Assets";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python \"$PROJECT_DIR/slice.py\" \"$PROJECT_DIR/Graphic Resources/Login.sketch\" \"$PROJECT_DIR/Login Examples/Assets.xcassets\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		693005641D554A8C00EC116F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6930056E1D554A8C00EC116F /* ViewController.swift in Sources */,
+				6930059D1D55608500EC116F /* BlurredViewController.swift in Sources */,
+				6930059B1D555F1B00EC116F /* LoginButton.swift in Sources */,
 				6930056C1D554A8C00EC116F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
