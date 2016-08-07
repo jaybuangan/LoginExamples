@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -70,6 +71,32 @@
                                     <action selector="showLogin:" destination="wd7-n5-5DS" eventType="touchUpInside" id="Qfz-bU-NCk"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-58" translatesAutoresizingMaskIntoConstraints="NO" id="IRx-Wb-W69">
+                                <rect key="frame" x="271" y="521" width="58" height="59"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebookLogin" translatesAutoresizingMaskIntoConstraints="NO" id="DLT-cw-5r8">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="6z4-Sf-9tm"/>
+                                            <constraint firstAttribute="width" secondItem="DLT-cw-5r8" secondAttribute="height" multiplier="1:1" id="iHf-XA-GQ1"/>
+                                            <constraint firstAttribute="width" constant="60" id="sKK-QX-eKH"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6z4-Sf-9tm"/>
+                                                <exclude reference="iHf-XA-GQ1"/>
+                                                <exclude reference="sKK-QX-eKH"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterLogin" translatesAutoresizingMaskIntoConstraints="NO" id="rGF-6v-bYJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="59"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogin" translatesAutoresizingMaskIntoConstraints="NO" id="VQx-qd-R4Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="59"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR0-gB-FAh">
                                 <rect key="frame" x="20" y="28" width="18" height="22"/>
                                 <constraints>
@@ -187,6 +214,7 @@
                             <constraint firstItem="D0y-Ra-X46" firstAttribute="top" secondItem="7KY-81-JDE" secondAttribute="bottom" id="F8B-vZ-tJv"/>
                             <constraint firstItem="IVA-rc-Px1" firstAttribute="centerY" secondItem="wip-h3-CE3" secondAttribute="centerY" id="Gpf-qM-COJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IVA-rc-Px1" secondAttribute="trailing" constant="61" id="K8h-Sh-ke0"/>
+                            <constraint firstItem="IRx-Wb-W69" firstAttribute="centerX" secondItem="wip-h3-CE3" secondAttribute="centerX" id="KXf-Mu-nl6"/>
                             <constraint firstItem="IVA-rc-Px1" firstAttribute="leading" secondItem="wip-h3-CE3" secondAttribute="leadingMargin" constant="61" id="MQp-gZ-3R7"/>
                             <constraint firstItem="IVA-rc-Px1" firstAttribute="leading" secondItem="wip-h3-CE3" secondAttribute="leadingMargin" constant="35" id="Mbf-6k-nUJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IVA-rc-Px1" secondAttribute="trailing" constant="35" id="MlX-rs-h8i"/>
@@ -204,10 +232,13 @@
                             <constraint firstItem="IVA-rc-Px1" firstAttribute="leading" secondItem="wip-h3-CE3" secondAttribute="leadingMargin" constant="61" id="gxP-is-LPh"/>
                             <constraint firstItem="D0y-Ra-X46" firstAttribute="top" secondItem="rh0-lU-KgP" secondAttribute="bottom" constant="88" id="icG-s2-GWj"/>
                             <constraint firstItem="qIc-J5-QjV" firstAttribute="leading" secondItem="wip-h3-CE3" secondAttribute="leadingMargin" constant="35" id="imQ-oJ-RVr"/>
+                            <constraint firstItem="IRx-Wb-W69" firstAttribute="top" secondItem="qIc-J5-QjV" secondAttribute="bottom" constant="166" id="l9p-JS-jlq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qIc-J5-QjV" secondAttribute="trailing" constant="35" id="s3t-Ui-Gfs"/>
                             <constraint firstItem="D0y-Ra-X46" firstAttribute="top" secondItem="7KY-81-JDE" secondAttribute="bottom" id="u7S-9R-BwP"/>
-                            <constraint firstItem="rh0-lU-KgP" firstAttribute="top" secondItem="IVA-rc-Px1" secondAttribute="bottom" constant="13" id="uWO-vi-N3p"/>
+                            <constraint firstItem="rh0-lU-KgP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IVA-rc-Px1" secondAttribute="bottom" constant="13" id="uWO-vi-N3p"/>
+                            <constraint firstItem="IVA-rc-Px1" firstAttribute="top" secondItem="qIc-J5-QjV" secondAttribute="bottom" constant="84" id="wCr-rc-8r5"/>
                             <constraint firstItem="rh0-lU-KgP" firstAttribute="leading" secondItem="wip-h3-CE3" secondAttribute="leadingMargin" constant="35" id="x0Q-uh-ZUi"/>
+                            <constraint firstItem="D0y-Ra-X46" firstAttribute="top" secondItem="IRx-Wb-W69" secondAttribute="bottom" constant="20" id="xcY-zG-1YR"/>
                             <constraint firstItem="IVA-rc-Px1" firstAttribute="leading" secondItem="rh0-lU-KgP" secondAttribute="leading" id="y7S-rS-5my"/>
                             <constraint firstItem="D0y-Ra-X46" firstAttribute="top" secondItem="rh0-lU-KgP" secondAttribute="bottom" constant="58" id="znR-m6-MhO"/>
                         </constraints>
@@ -227,6 +258,7 @@
                                 <exclude reference="8IK-BX-TPk"/>
                                 <exclude reference="F8B-vZ-tJv"/>
                                 <exclude reference="icG-s2-GWj"/>
+                                <exclude reference="xcY-zG-1YR"/>
                             </mask>
                         </variation>
                     </view>
@@ -234,14 +266,17 @@
                         <outlet property="backgroundImage" destination="7KY-81-JDE" id="7qw-Mv-1kh"/>
                         <outlet property="closeButton" destination="KR0-gB-FAh" id="co8-e8-IB2"/>
                         <outlet property="loginButton" destination="IVA-rc-Px1" id="FgV-yb-d4j"/>
+                        <outlet property="loginConstraint" destination="wCr-rc-8r5" id="nfi-cT-Q9m"/>
                         <outlet property="loginView" destination="qIc-J5-QjV" id="TE3-Tp-OP8"/>
                         <outlet property="password" destination="SJ5-30-PTt" id="K8b-f0-XFF"/>
+                        <outlet property="slTopConstraint" destination="l9p-JS-jlq" id="mgs-4s-nv8"/>
+                        <outlet property="socialLoginStack" destination="IRx-Wb-W69" id="Kkx-eo-ya6"/>
                         <outlet property="username" destination="2EG-Ce-Ar2" id="dfb-3H-HJB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2a-Vh-kxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144" y="512"/>
+            <point key="canvasLocation" x="-186" y="580"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -289,7 +324,10 @@
     <resources>
         <image name="closeButton" width="18" height="18"/>
         <image name="dog.jpg" width="1920" height="1280"/>
+        <image name="facebookLogin" width="58" height="59"/>
+        <image name="googleLogin" width="58" height="59"/>
         <image name="lockIcon" width="21" height="26"/>
+        <image name="twitterLogin" width="58" height="59"/>
         <image name="userIcon" width="25" height="26"/>
     </resources>
 </document>
